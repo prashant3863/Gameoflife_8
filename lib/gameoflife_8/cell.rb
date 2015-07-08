@@ -14,6 +14,9 @@ module GameOfLife_8
     def alive?
       @state == ALIVE
     end
+
+    def revive!
+      @state = ALIVE
+    end
   end
 end
-
