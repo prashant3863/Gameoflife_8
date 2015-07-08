@@ -17,5 +17,11 @@ module GameOfLife_8
       cell.revive!
       expect(cell).to be_alive
     end
+
+    it "revived cell is not dead" do
+      cell = Cell.new(Cell::DEAD)
+      cell.revive!
+      expect(cell).to_not be_dead
+    end
   end
 end
